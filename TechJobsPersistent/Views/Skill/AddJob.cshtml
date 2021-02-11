@@ -3,7 +3,7 @@
 <h1>Add Tag to Event: @Model.Job.Name</h1>
 
 <form asp-controller="Skill" asp-action="AddJob" method="post">
-    <input type="hidden" value="@Model.Job.Id" name="NameId" />
+    <input type="hidden" value="@Model.Job.Id" name="JobId" />
     <div class="form-group">
         <label asp-for="SkillId">Skill</label>
         <select asp-for="SkillId" asp-items="Model.Skills"></select>
