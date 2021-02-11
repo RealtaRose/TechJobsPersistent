@@ -3,6 +3,7 @@ namespace TechJobsPersistent.Models
 {
     public class JobSkill
     {
+
         public int JobId { get; set; }
         public Job Job { get; set; }
 
