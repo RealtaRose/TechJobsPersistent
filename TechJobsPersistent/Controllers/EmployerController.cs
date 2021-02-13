@@ -46,10 +46,10 @@ namespace TechJobsPersistent.Controllers
 
                 context.Employers.Add(newEmployer);
                 context.SaveChanges();
-                return Redirect("/Employer/");
+                return Redirect("/Employer");
             }
 
-            return View("Add");
+            return View("Add", viewModel);
         }
 
         public IActionResult About(int id)
