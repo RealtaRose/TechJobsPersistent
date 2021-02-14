@@ -10,23 +10,22 @@
 
 
     <div class="form-group">
-        <label asp-for="EmployerID">Employer</label>
-        
-        <select asp-for="EmployerID" asp-items="@Model.AllEmployers" ></select>
+        <label asp-for="EmployerID">Employer</label>        
+        <select asp-for="EmployerID" asp-items="@Model.AllEmployers" class="form-control"></select>
         <a asp-controller="Employer" asp-action="Add">Add Employer</a>
-        <span asp-validation-for="EmployerID"></span>
     </div>
 
     
     <div class="form-group">
         <label>Skills:</label>
 
-        @foreach (Skill skill in Model.AllSkills)
-        {
-            <label asp-for="AllSkills">@skill.Name</label>
-            <input type="checkbox" name="selectedSkills" value="@skill.Id" class="form-control" />
-            <span asp-validation-for="AllSkills"></span>
-        }
+            @foreach (Skill skill in 
+                @Model.AllSkills)
+            {
+                <label asp-for="AllSkills">@skill.Name</label>
+                <input type="checkbox" name="selectedSkills" value="@skill.Id" class="form-control" />
+            }
+        
         <a asp-controller="Skill" asp-action="Add">Add Skill</a>
     </div>
 

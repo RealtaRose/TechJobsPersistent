@@ -33,7 +33,7 @@ namespace TechJobsPersistent.Controllers
             return View(viewModel);
         }
 
-        [HttpPost]
+        [HttpPost, Route("/Employer/Add")]
         public IActionResult ProcessAddEmployerForm(AddEmployerViewModel viewModel)
         {
             if (ModelState.IsValid)

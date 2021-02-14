@@ -9,6 +9,8 @@ WHERE employer.location = "Saint Louis"
 
 --Part 3
 
---SELECT Name, Description
---FROM skills
-----LEFT JOIN 
+SELECT *
+FROM skills
+LEFT JOIN jobskills ON skills.Id = jobskills.SkillId
+WHERE jobskills.JobId IS NOT NULL
+ORDER BY name ASC;

@@ -67,7 +67,7 @@ namespace TechJobsPersistent.Controllers
                 return Redirect("Index");
             }
             
-            return View("Add", addJobViewModel);
+            return View("AddJob", addJobViewModel);
         }
 
 
